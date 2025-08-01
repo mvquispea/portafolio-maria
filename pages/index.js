@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>María Quispe – IA Educativa</title>
+        <title>María Quispe – IA Educativa V1</title>
         {/*  <link rel="icon" href="/m.ico" /> */}
          <link rel="icon" href="/m.png" type="image/png" />
       </Head>
