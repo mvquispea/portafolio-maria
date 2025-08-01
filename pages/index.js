@@ -1,12 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SobreMi from "../components/SobreMi";
+import Experiencia from "../components/Experiencia";
+import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>María Quispe – IA Educativa</title>
+        {/*  <link rel="icon" href="/m.ico" /> */}
+         <link rel="icon" href="/m.png" type="image/png" />
       </Head>
 
       <main className="min-h-screen flex items-center justify-center px-8 bg-gray-100">
@@ -51,21 +57,25 @@ export default function Home() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
             <Image
-              src="https://cdn.jsdelivr.net/gh/reallex/image-assets@main/ai-desk.png"
-              alt="Ilustración desarrolladora"
-              width={400}
-              height={400}
-              className="rounded-xl shadow-lg"
+              src="/maria-quispe.png"
+              alt="María Quispe"
+              width={300}
+              height={300}
+              className="rounded-full shadow-xl border-4 border-blue-300 hover:shadow-2xl transition duration-500"
             />
           </motion.div>
         </div>
       </main>
+      <SobreMi />
+      <Experiencia />
+      <Footer />
+      <ScrollToTop />
     </>
   );
 }
